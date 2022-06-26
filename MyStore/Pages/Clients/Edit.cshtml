@@ -1,10 +1,10 @@
 ﻿@page
-@model MyStore.Pages.Clients.CreateModel
+@model MyStore.Pages.Clients.EditModel
 @{
 }
 
 <br>
-<h2>New Client</h2>
+<h2>Edit Client</h2>
 
 @if (Model.errorMessage.Length > 0)
 {
@@ -15,6 +15,7 @@
 }
 
 <form method="POST">
+    <input type="hidden" name="id" value="@Model.clientInfo.id">
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Name</label>
         <div class="col-sm-6">

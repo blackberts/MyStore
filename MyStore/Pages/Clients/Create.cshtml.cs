@@ -10,7 +10,7 @@ namespace MyStore.Pages.Clients
 
         public string errorMessage = "";
 
-        public string succesMessage = "";
+        public string successMessage = "";
 
         public void OnGet()
         {
@@ -30,7 +30,7 @@ namespace MyStore.Pages.Clients
                 return;
             }
 
-            // save the new client into the databse
+            // save the new client into the database
             try
             {
                 string connectionString = "Data Source=DESKTOP-GUM1BKT;Initial Catalog=mystore;Integrated Security=True";
@@ -61,7 +61,7 @@ namespace MyStore.Pages.Clients
 
 
             clientInfo.name = ""; clientInfo.email = ""; clientInfo.phone = ""; clientInfo.address = "";
-            succesMessage = "New Client Added Correctly";
+            successMessage = "New Client Added Correctly";
 
             Response.Redirect("/Clients/Index");
         }
