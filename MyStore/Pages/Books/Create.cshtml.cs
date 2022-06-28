@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Data.SqlClient;
-using static MyStore.Pages.Books.IndexModel;
 
 namespace MyStore.Pages.Books
 {
@@ -20,9 +19,9 @@ namespace MyStore.Pages.Books
         public void OnPost()
         {
             booksInfo.booksName = Request.Form["booksName"];
-            booksInfo.description = Request.Form["description"];
-            booksInfo.price = Request.Form["price"];
-            booksInfo.typeBook = Request.Form["typeBook"];
+            booksInfo.description = Request.Form["Description"];
+            booksInfo.price = Request.Form["Price"];
+            booksInfo.typeBook = Request.Form["TypeBook"];
 
             if (booksInfo.booksName.Length == 0 || booksInfo.description.Length == 0 ||
                 booksInfo.price.Length == 0 || booksInfo.typeBook.Length == 0)
@@ -40,7 +39,7 @@ namespace MyStore.Pages.Books
                 {
                     connection.Open();
                     string sql = "INSERT INTO books " +
-                                 "(booksName, Description, Price, TypeBook) VALUES " +
+                                 "(booksName, description, price, TypeBook) VALUES " +
                                  "(@booksName, @description, @price, @typeBook);";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
@@ -64,7 +63,7 @@ namespace MyStore.Pages.Books
             booksInfo.booksName = ""; booksInfo.description = ""; booksInfo.price = ""; booksInfo.typeBook= "";
             successMessage = "New Client Added Correctly";
 
-            Response.Redirect("/Clients/Index");
+            Response.Redirect("/Books/Index");
         }
     }
 }

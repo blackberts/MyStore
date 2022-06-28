@@ -41,13 +41,14 @@ namespace MyStore.Pages.Books
 
             }
         }
-        public class BooksInfo
-        {
-            public string id { get; set; }
-            public string booksName { get; set; }
-            public string description { get; set; }
-            public string price { get; set; }
-            public string typeBook { get; set; }
-        }
+    }
+
+    public class BooksInfo
+    {
+        public string id { get; set; }
+        public string booksName { get; set; }
+        public string description { get; set; }
+        public string price { get; set; }
+        public string typeBook { get; set; }
     }
 }
