@@ -4,12 +4,12 @@
 }
 
 <br>
-<h2>Books</h2>
+<h2>@Model.booksInfo.booksName</h2>
+
+<a class="btn btn-primary btn-sm" href="/Books">Back</a>
 <table class="table">
     <thead>
         <tr>
-            <th>Id</th>
-            <th>Name</th>
             <th>Description</th>
             <th>Price</th>
             <th>Types</th>
@@ -17,8 +17,6 @@
     </thead>
     <tbody>
             <tr>
-                <td>@Model.booksInfo.id</td>
-                <td>@Model.booksInfo.booksName</td>
                 <td>@Model.booksInfo.description</td>
                 <td>@Model.booksInfo.price</td>
                 <td>@Model.booksInfo.typeBook</td>
