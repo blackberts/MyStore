@@ -3,11 +3,49 @@
 @{
 }
 
-<br>
-<h2>@Model.booksInfo.booksName</h2>
-<img src="/Images/@Model.booksInfo.image" alt="" style="width:480px;height:640px;"/>
+@*<div style="padding: 10px;"></div>
+<div class="card mb-3">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="https://images.wallpaperscraft.ru/image/single/mercedes_benz_s_class_w222_112850_800x600.jpg" 
+                 class="img-fluid rounded-start rounded" alt="@Model?.booksInfo.booksName">
+        </div>
+        <div class="col-md-4">
+            <div class="card-body">
+                <h5 class="card-title text-center">@Model.booksInfo.booksName</h5>
+                <p class="card-text"><b>Описание: </b>@Model?.booksInfo.description</p>
+                <p class="card-text"><b>Стоимость: </b>@Model?.booksInfo.price ₽</p>
+                <p class="card-text"><b>Тип: </b>@Model?.booksInfo.typeBook</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card-body">
+                <p class="card-text"><b>Описание: </b>@Model?.booksInfo.description</p>
+            </div>
+        </div>
+    </div>
+</div>*@
+@*<h2>@Model.booksInfo.booksName</h2>*@
 <a class="btn btn-primary btn-sm" href="/Books">Back</a>
-<table class="table">
+<div style="padding: 10px;"></div>
+<div class="card mb-3">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="/Images/@Model.booksInfo.image" alt="" class="rounded float-start" style="width:400px;height:600px;" />
+        </div>
+        <div class="col-md-4">
+            <div class="card-body">
+                <h5 class="card-title text-center">@Model.booksInfo.booksName</h5>
+                <p class="card-text"><b>Description: </b>@Model.booksInfo.description</p>
+                <p class="card-text"><b>Price: </b>@Model.booksInfo.price $</p>
+                <p class="card-text"><b>Type of book: </b>@Model.booksInfo.typeBook</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<img src="/Images/@Model.booksInfo.image" alt="" class="rounded float-start" style="width:480px;height:640px;"/>*@
+@*<table class="table">
     <thead>
         <tr>
             <th>Description</th>
@@ -22,4 +60,4 @@
                 <td>@Model.booksInfo.typeBook</td>
             </tr>
     </tbody>
-</table>
+</table>*@

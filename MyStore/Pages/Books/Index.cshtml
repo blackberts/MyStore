@@ -3,10 +3,10 @@
 @{
 }
 
-<br>
+@*<br>
 <h2>Books</h2>
 <a class="btn btn-primary btn-sm" href="/Books/Create">New Book</a>
-<table class="table">
+<table class="table table-hover">
     <thead>
         <tr>
             <th>Id</th>
@@ -35,3 +35,66 @@
         }
     </tbody>
 </table>
+*@
+
+<style>
+    .card-buttons-group {
+        text-align: right;
+        padding: 10px;
+    }
+</style>
+
+<div class="card-buttons-group">
+@*    <button class="btn btn-danger" id='hideCardsId'>Скрыть</button>
+      <button class='btn btn-success' id='showCardsId'>Показать</button>*@
+    <a class="btn btn-success btn-sm" href="/Books/Create">New Book</a>
+</div>
+
+<div style="padding: 10px;"></div>
+    <div class="row">
+        @foreach (var item in Model.listBooks)
+        {
+            <div class="row row-cols-0 col-md-4 text-center">
+                <div class="col" style="padding: 10px;">
+                    <div class="card">
+                        <img src="/Images/@item.image" class="card-img-top" alt="" style="width:400px;height:500px;">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.booksName</h5>
+@*                            <p class="card-text">@item.description</p>*@
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Price: @item.price $</li>
+                            <li class="list-group-item">@item.typeBook</li>
+                        </ul>
+                        <div class="card-body">
+                             <a class="btn btn-primary btn-sm" href="/Books/Edit?id=@item.id">Edit</a>
+                             <a class="btn btn-danger btn-sm" href="/Books/Delete?id=@item.id">Delete</a>
+                             <a class="btn btn-success btn-sm" href="/Books/Check?id=@item.id">Check</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>   
+
+@*@section pageScripts {
+    <script>
+        const hideCardElement = $('#hideCardsId');
+        const showCardElement = $('#showCardsId');
+        const cardElement = $('.card');
+        
+        const interval = 2000;
+        
+        hideCardElement.click(function(){
+            hideCardElement.hide(interval);
+            showCardElement.show(interval);
+            cardElement.hide(interval);
+        });
+        
+        showCardElement.click(function () {
+            hideCardElement.show(interval);
+            showCardElement.hide(interval);
+            cardElement.show(interval);
+        });
+    </script>
+}*@
