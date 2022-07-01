@@ -32,6 +32,7 @@ namespace MyStore.Pages.Books
                                 booksInfo.description = reader.GetString(2);
                                 booksInfo.price = "" + reader.GetDecimal(3);
                                 booksInfo.typeBook = reader.GetString(4);
+                                booksInfo.image = reader.GetString(5);
                             }
                         }
                     }

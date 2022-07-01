@@ -29,6 +29,7 @@ namespace MyStore.Pages.Books
                                 booksInfo.description = reader.GetString(2);
                                 booksInfo.price = "" + reader.GetDecimal(3);
                                 booksInfo.typeBook = reader.GetString(4);
+                                booksInfo.image = reader.GetString(5);
 
                                 listBooks.Add(booksInfo);
                             }
@@ -50,5 +51,7 @@ namespace MyStore.Pages.Books
         public string description { get; set; }
         public string price { get; set; }
         public string typeBook { get; set; }
+        public string image { get; set; }
     }
+
 }

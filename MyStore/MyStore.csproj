@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\Images\chartottes_web.jpg" />
+    <None Include="wwwroot\Images\kimetsu_no_yaiba.jpg" />
+    <None Include="wwwroot\Images\soul_eater.jpg" />
+    <None Include="wwwroot\Images\the_godfather.jpg" />
+    <None Include="wwwroot\Images\the_outsiders.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 
